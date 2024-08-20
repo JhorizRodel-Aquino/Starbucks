@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    .container {
+        @apply mx-auto px-4;
+    }
+    .header__panel {
+        @apply hidden flex justify-between items-center;
+    }
+    .header__panel.open {
+        @apply block bg-blue-100 absolute;
+    }
+    .toggle__menu {
+        @apply absolute right-0 flex flex-col gap-1 mr-4; 
+    }
+    .toggle__menu span {
+        @apply content-["*"] bg-black w-5 h-[2px] rounded-lg ease-in-out duration-700;
+    }
+
+}
