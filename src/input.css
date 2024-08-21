@@ -1,22 +1,109 @@
+@import url("https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
-    .container {
-        @apply mx-auto px-4;
-    }
-    .header__panel {
-        @apply hidden flex justify-between items-center;
-    }
-    .header__panel.open {
-        @apply block bg-blue-100 absolute;
-    }
-    .toggle__menu {
-        @apply absolute right-0 flex flex-col gap-1 mr-4; 
-    }
-    .toggle__menu span {
-        @apply content-["*"] bg-black w-5 h-[2px] rounded-lg ease-in-out duration-700;
-    }
+  body {
+    @apply font-siliguri overflow-x-hidden;
+  }
+  .container {
+    @apply max-w-[1600px] w-full px-4 mx-auto;
+  }
+  h1 {
+    @apply text-[0.8rem];
+  }
+  h2 {
+    @apply text-[1.8rem] leading-[2.3rem];
+  }
+  h3 {
+    @apply text-[1.6rem] font-semibold;
+  }
+  h4, .rewardsItems li {
+    @apply text-[1.25rem] font-semibold;
+  }
+  h5 {
+    @apply text-[1.1rem] font-semibold;
+  }
+  p {
+    @apply text-[0.9rem];
+  }
+
+  .container {
+    @apply mx-auto;
+  }
+  .header__panel {
+    @apply flex flex-col gap-8 w-[80%] h-screen top-[4.5rem] fixed justify-start py-11 px-8 font-semibold duration-700 right-[-100%] bg-white lg:static lg:flex-row lg:w-[100%] lg:justify-between border-t-2 border-black/10 z-50;
+  }
+  .header__panel.open {
+    @apply right-[0] overflow-y-hidden;
+  }
+  .toggle__menu {
+    @apply right-0 flex flex-col gap-1 mr-4 lg:hidden ease-in-out duration-700 relative justify-center;
+  }
+  .toggle__menu.open {
+    @apply z-50;
+  }
+  .toggle__menu span {
+    @apply content-["*"] bg-black w-5 h-[2px] rounded-lg duration-500;
+  }
+  .toggle__menu.open span:first-child {
+    @apply translate-y-[3px] rotate-[-225deg];
+  }
+  .toggle__menu.open span:nth-child(2) {
+    @apply hidden;
+  }
+  .toggle__menu.open span:last-child {
+    @apply translate-y-[-3px] rotate-[225deg];
+  }
+
+
+  .rewardsItems__tabs:after {
+    @apply content-[""] w-[20%] bg-primary h-1 absolute bottom-0 duration-500;
+  }
+
+  .rewardsItems__tabs:after.rewards__tab-1-underline {
+    @apply left-0;
+  }
+  .rewardsItems__tabs:after.rewards__tab-2-underline {
+    @apply left-[20%];
+  }
+  .rewardsItems__tabs:after.rewards__tab-3-underline {
+    @apply left-[40%];
+  }
+  .rewardsItems__tabs:after.rewards__tab-4-underline {
+    @apply left-[60%];
+  }
+  .rewardsItems__tabs:after.rewards__tab-5-underline {
+    @apply left-[80%];
+  }
+
+  .rewardsItems__details {
+    @apply grid gap-3 justify-items-center text-center py-16 hidden;
+  }
+  .rewardsItems__details.active {
+    @apply block animate-[fadeIn_1s];
+  }
+
+
+}
+
+@layer components {
+  .btn {
+    @apply rounded-3xl py-[3px] px-4 border text-[1rem] active:scale-95 duration-300;
+  }
+  .btn.bg-dark {
+    @apply bg-black text-white border-black hover:bg-black/60;
+  }
+  .btn.bg-dark-outline {
+    @apply bg-none text-black border-black hover:bg-black/10 
+  }
+  .btn.bg-dark-green {
+    @apply bg-headerr text-white border-white hover:bg-[#182e28];
+  }
+  .btn.bg-primaryy {
+    @apply bg-primary text-white border-white hover:bg-primary/80 py-[5px];
+  }
 
 }

@@ -4,5 +4,5 @@ const toggleMenu = document.querySelector(".toggle__menu");
 
 toggleMenu.addEventListener("click", () => {
   headerPanel.classList.toggle("open");
-  headerRight.classList.toggle("open");
+  toggleMenu.classList.toggle("open");
 });
