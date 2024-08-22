@@ -6,13 +6,13 @@
 
 @layer base {
   body {
-    @apply font-siliguri overflow-x-hidden;
+    @apply font-siliguri overflow-x-hidden text-black/80;
   }
   .container {
     @apply max-w-[1600px] w-full px-4 mx-auto;
   }
   h1 {
-    @apply text-[0.8rem];
+    @apply text-[0.8rem] lg:text-[1rem];
   }
   h2 {
     @apply text-[1.8rem] leading-[2.3rem];
@@ -27,14 +27,20 @@
     @apply text-[1.1rem] font-semibold;
   }
   p {
-    @apply text-[0.9rem];
+    @apply text-[.93rem];
   }
-
+  .hide {
+    @apply animate-[bgYellow_2s];
+  }
   .container {
     @apply mx-auto;
   }
+.header__nav li {
+  @apply lg:text-[1rem] lg:font-bold lg:py-[22px] lg:tracking-widest;
+}
   .header__panel {
-    @apply flex flex-col gap-8 w-[80%] h-screen top-[4.5rem] fixed justify-start py-11 px-8 font-semibold duration-700 right-[-100%] bg-white lg:static lg:flex-row lg:w-[100%] lg:justify-between border-t-2 border-black/10 z-50;
+    @apply flex flex-col gap-8 w-[80%] h-screen top-[4.5rem] fixed justify-start py-11 px-8 font-semibold duration-700 right-[-100%] bg-white border-t-2 border-black/10 z-50
+    lg:static lg:flex-row lg:h-auto lg:w-[100%] lg:border-none lg:justify-between lg:p-0 lg:pr-7;
   }
   .header__panel.open {
     @apply right-[0] overflow-y-hidden;
@@ -58,11 +64,15 @@
     @apply translate-y-[-3px] rotate-[225deg];
   }
 
+  /* REWARDS STEPS */
+  .rewardsSteps__card {
+    @apply grid grid-cols-[auto_auto] gap-x-4 gap-y-[18px];
+  }
 
+  /* REWARDS ITEMS */
   .rewardsItems__tabs:after {
     @apply content-[""] w-[20%] bg-primary h-1 absolute bottom-0 duration-500;
   }
-
   .rewardsItems__tabs:after.rewards__tab-1-underline {
     @apply left-0;
   }
@@ -86,6 +96,68 @@
     @apply block animate-[fadeIn_1s];
   }
 
+  /* REWARDS EXTRAS */
+  .rewardsExtras__card {
+    @apply grid grid-cols-[auto_auto] gap-x-4 gap-y-4;
+  }
+
+  /* REWARDS PAYMENT */
+  .rewardsPayment__card {
+    @apply grid grid-cols-[112px_auto] items-start justify-items-start gap-4 pb-5;
+  }
+
+  /* REWARDS ACCOUNT */
+  .rewardsAccount__card {
+    @apply grid grid-cols-[auto_auto] gap-4;
+  }
+  .rewardsAccount__card img {
+    @apply w-[112px];
+  }
+
+  /* FOOTER */
+  .footerTop__item {
+  }
+  .footerTop__item--category {
+    @apply font-[500] py-2 flex justify-between items-center my-3;
+  }
+  .footerTop__item--text {
+    @apply h-auto max-h-0 overflow-hidden ease-in-out duration-300 grid gap-6;
+  }
+  .footerTop__item--text.open {
+    @apply max-h-[200rem] duration-700;
+  }
+  .footerTop__item i {
+    @apply duration-300;
+  }
+  .footerTop__item i.open {
+    @apply rotate-180 duration-300;
+  }
+
+
+  .footerBottom__icons li {
+    @apply relative;
+  }
+  .footerBottom__icons li:hover span {
+    @apply scale-100;
+  }
+  .footerBottom__icons i {
+    @apply w-[19.2px] h-[19.2px] text-white text-center grid items-center text-[17px];
+  }
+  .footerBottom__icons small {
+    @apply inline-block flex justify-center items-center w-[32px] h-[32px] rounded-full bg-black/90;
+  }
+  .footerBottom__icons a {
+    @apply w-[44px] h-[44px] grid justify-items-center items-center;
+  }
+  .footerBottom__icons span {
+    @apply absolute flex justify-center items-center w-[44px] h-[44px] rounded-full bg-black/20 left-0 top-0 z-[-1] scale-75 duration-300;
+  }
+  .footerBottom__text a {
+    @apply no-underline;
+  }
+  .footerBottom__text a:hover {
+    @apply underline;
+  }
 
 }
 

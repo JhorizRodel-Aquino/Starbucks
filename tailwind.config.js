@@ -5,12 +5,12 @@ module.exports = {
     extend: {
       keyframes: {
         merge1: {
-          "0%": { transofrm: "translateY(0)" },
+          "0%": { transform: "translateY(0)" },
           "50%": { transform: "translateY(6px)" },
           "100%": { transform: "rotate(225deg)" },
         },
         merge3: {
-          "0%": { transofrm: "translateY(0)" },
+          "0%": { transform: "translateY(0)" },
           "50%": { transform: "translateY(-6px)" },
           "100%": { transform: "rotate(-225deg)" },
         },
@@ -21,6 +21,14 @@ module.exports = {
         fadeIn: {
           "0%": { opacity: "0" },
           "100%": { opacity: "1" },
+        },
+        bgYellow: {
+          "0%, 100%": { background: "transparent" },
+          "50%": { background: "#FACD46" },
+        },
+        bgYellow2: {
+          "0%, 100%": { background: "transparent" },
+          "50%": { background: "#FACD46" },
         },
       },
 
