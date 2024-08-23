@@ -45,7 +45,7 @@ module.exports = {
 
       backgroundImage: {
         bgBanner: "url('../img/banner_mobile.webp')",
-        bgBannerDesktop: "url('../img/banner_desktop.webp')",
+        bgBannerDesktop: "url('../img/banner_desktop.png')",
       },
     },
   },
