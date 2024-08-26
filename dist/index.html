@@ -69,7 +69,10 @@
             <span></span>
             <span></span>
             <span></span>
+            <span></span>
           </div>
+
+          <div class="backdrop"></div>
         </div>
       </div>
     </header>
@@ -92,47 +95,50 @@
 
       <!-- REWARDS BANNER -->
       <section
-        class="rewardsBanner relative bg-bgBanner bg-cover bg-no-repeat h-[68vh] lg:bg-secondary lg:bg-none lg:h-auto md:bg-secondary md:bg-none md:h-auto"
+        class="rewardsBanner relative lg:bg-secondary lg:bg-none lg:h-auto md:bg-secondary md:bg-none md:h-auto"
       >
-        <div class="container">
+        <div
+          class="rewardsBanner__wrapper max-w-[1600px] mx-auto grid items-start md:flex lg:flex lg:justify-between lg:h-[810px] md:justify-between md:h-[453px] lg:pl-18 md:px-8"
+        >
+          <img
+            class="z-20 w-full row-start-1 col-start-1 md:w-auto lg:w-auto md:hidden lg:hidden"
+            src="../img/banner_mobile.webp"
+            alt=""
+          />
           <div
-            class="rewardsBanner__wrapper flex justify-center lg:justify-between lg:h-[810px] md:justify-between md:h-[453px]"
+            class="rewardsBanner__text row-start-1 col-start-1 grid justify-items-center gap-3 text-center pt-8 lg:self-center lg:w-[40%] lg:justify-items-start lg:text-start lg:py-0 z-30 md:w-[40%] md:self-center md:justify-items-start md:text-start md:py-0"
           >
-            <div
-              class="rewardsBbanner__text grid justify-items-center gap-3 text-center pt-8 lg:self-start lg:w-[40%] lg:self-center lg:justify-items-start lg:text-start lg:py-0 z-30 md:w-[40%] md:self-center md:justify-items-start md:text-start md:py-0"
+            <h2 class="font-semibold">
+              FREE COFFEE <br />
+              IS A TAP AWAY
+            </h2>
+            <p class="text-4 lg:text-[1.2rem] md:text-[1.2rem]">
+              Join now to start earning Rewards.
+            </p>
+            <a class="btn bg-primaryy mt-5 font-bold" href=""
+              >Join <span class="hidden lg:inline md:inline">now</span
+              ><span class="lg:hidden md:hidden">in the app</span></a
             >
-              <h2 class="font-semibold">
-                FREE COFFEE <br />
-                IS A TAP AWAY
-              </h2>
-              <p class="text-4 lg:text-[1.2rem] md:text-[1.2rem]">
-                Join now to start earning Rewards.
-              </p>
-              <a class="btn bg-primaryy mt-5 font-bold" href=""
-                >Join <span class="hidden lg:inline md:inline">now</span
-                ><span class="lg:hidden md:hidden">in the app</span></a
+            <small class="text-[14.88px] lg:text-[1.2rem] md:text-[1.2rem]"
+              ><span class="hidden lg:inline md:inline">Or </span
+              ><a class="underline hover:no-underline" href=""
+                ><span class="lg:hidden md:hidden">Or join online</span>
+                <span class="hidden lg:inline md:inline"
+                  >join in the app</span
+                ></a
+              ><span class="hidden lg:inline md:inline">
+                for the best experience</span
               >
-              <small class="text-[14.88px] lg:text-[1.2rem] md:text-[1.2rem]"
-                ><span class="hidden lg:inline md:inline">Or </span
-                ><a class="underline hover:no-underline" href=""
-                  ><span class="lg:hidden md:hidden">Or join online</span>
-                  <span class="hidden lg:inline md:inline"
-                    >join in the app</span
-                  ></a
-                ><span class="hidden lg:inline md:inline">
-                  for the best experience</span
-                >
-              </small>
-            </div>
-            <div
-              class="rewardsBanner__img absolute hidden h-full lg:w-[124rem] lg:block md:block md:w-[65rem]"
-            >
-              <img
-                class="h-full object-cover object-right relative"
-                src="../img/banner_desktop.png"
-                alt=""
-              />
-            </div>
+            </small>
+          </div>
+          <div
+            class="rewardsBanner__img absolute hidden h-full lg:w-[124rem] lg:block md:block md:w-[65rem]"
+          >
+            <img
+              class="h-full object-cover object-right relative"
+              src="../img/banner_desktop.png"
+              alt=""
+            />
           </div>
         </div>
       </section>
@@ -428,7 +434,9 @@
       </section>
 
       <!-- REWARDS ACCOUNT -->
-      <section class="rewardsAccount py-6 bg-secondary lg:py-12 md:py-12 lg:borderImg md:borderImg">
+      <section
+        class="rewardsAccount py-6 bg-secondary lg:py-12 md:py-12 lg:borderImg md:borderImg"
+      >
         <div class="container">
           <h3 class="text-center">Keep the Rewards Coming</h3>
           <p class="text-center pt-3">
@@ -437,7 +445,9 @@
             Stars.
           </p>
 
-          <div class="rewardsAccount__wrapper grid gap-10 pt-[52px] lg:grid-cols-3 md:grid-cols-3">
+          <div
+            class="rewardsAccount__wrapper grid gap-10 pt-[52px] lg:grid-cols-3 md:grid-cols-3"
+          >
             <div class="rewardsAccount__card" id="partner1-card">
               <img src="../img/account1.webp" alt="" />
               <p>
@@ -503,7 +513,9 @@
                 >
               </p>
             </div>
-            <a class="btn bg-primaryy justify-self-center lg:col-span-3 md:col-span-3" href=""
+            <a
+              class="btn bg-primaryy justify-self-center lg:col-span-3 md:col-span-3"
+              href=""
               >Join Starbucks® Rewards</a
             >
           </div>
@@ -513,7 +525,9 @@
       <!-- REWARDS QUESTION -->
       <section class="rewardsQuestion py-16 lg:py-32 md:py-32">
         <div class="container">
-          <div class="rewardsQuestion__wrapper grid md:max-w-[700px] lg:max-w-[900px] mx-auto">
+          <div
+            class="rewardsQuestion__wrapper grid md:max-w-[700px] lg:max-w-[900px] mx-auto"
+          >
             <h3>Questions?</h3>
             <p class="pt-3">
               We want to help in any way we can. You can ask your barista
@@ -623,7 +637,9 @@
                 >
               </p>
             </div>
-            <div class="rewardsTerms__bottom grid gap-6 lg:grid-cols-2 lg:items-start md:grid-cols-2 md:items-start">
+            <div
+              class="rewardsTerms__bottom grid gap-6 lg:grid-cols-2 lg:items-start md:grid-cols-2 md:items-start"
+            >
               <div class="rewardsTerms__bottom--card grid gap-4">
                 <span
                   class="font-bold text-[.93rem] text-black/50 tracking-widest"
@@ -719,7 +735,9 @@
     <footer class="footerpb-36 pt-12 pb-[146px]">
       <section class="footerTop py-4 border-t-2 border-black/10">
         <div class="container">
-          <div class="footerTop__wrapper grid lg:gap-8 lg:grid-cols-[13%_15%_15%_15%_13%] lg:justify-items-start lg:max-w-[1300px]">
+          <div
+            class="footerTop__wrapper grid lg:gap-8 lg:grid-cols-[13%_15%_15%_15%_13%] lg:justify-items-start lg:max-w-[1300px]"
+          >
             <div class="footerTop__item">
               <h5 class="footerTop__item--category">
                 About Us <i class="fa-solid fa-chevron-up"></i>
@@ -843,5 +861,11 @@
     <script src="../js/tabs.js"></script>
     <script src="../js/bg__yellow.js"></script>
     <script src="../js/accordions.js"></script>
+    <script>
+      const body = document.querySelector("body");
+      toggleMenu.addEventListener("click", () => {
+        body.classList.toggle("open");
+      });
+    </script>
   </body>
 </html>

@@ -4,20 +4,6 @@ module.exports = {
   theme: {
     extend: {
       keyframes: {
-        merge1: {
-          "0%": { transform: "translateY(0)" },
-          "50%": { transform: "translateY(6px)" },
-          "100%": { transform: "rotate(225deg)" },
-        },
-        merge3: {
-          "0%": { transform: "translateY(0)" },
-          "50%": { transform: "translateY(-6px)" },
-          "100%": { transform: "rotate(-225deg)" },
-        },
-        wiggle: {
-          "0%, 100%": { transform: "rotate(-3deg)" },
-          "50%": { transform: "rotate(3deg)" },
-        },
         fadeIn: {
           "0%": { opacity: "0" },
           "100%": { opacity: "1" },

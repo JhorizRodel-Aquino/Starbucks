@@ -8,6 +8,9 @@
   body {
     @apply font-siliguri overflow-x-hidden text-black/90;
   }
+  body.open {
+    @apply overflow-hidden;
+  }
   .container {
     @apply max-w-[1600px] w-full px-4 mx-auto;
   }
@@ -61,16 +64,40 @@
     @apply z-50;
   }
   .toggle__menu span {
-    @apply content-["*"] bg-black w-5 h-[2px] rounded-lg duration-500;
+    @apply content-["*"] bg-black w-5 h-[2px] rounded-lg duration-300;
+  }
+    .toggle__menu span:nth-child(2) {
+    @apply absolute;
   }
   .toggle__menu.open span:first-child {
-    @apply translate-y-[3px] rotate-[-225deg];
-  }
-  .toggle__menu.open span:nth-child(2) {
-    @apply hidden;
+    @apply translate-y-[0.37rem] opacity-0 delay-0;
   }
   .toggle__menu.open span:last-child {
-    @apply translate-y-[-3px] rotate-[225deg];
+    @apply translate-y-[-0.37rem] opacity-0 delay-0;
+  }
+  .toggle__menu.open span:nth-child(2) {
+    @apply rotate-[45deg] delay-300;
+  }
+  .toggle__menu.open span:nth-child(3) {
+    @apply rotate-[135deg] delay-300;
+  }
+  .toggle__menu span:first-child {
+    @apply delay-300;
+  }
+  .toggle__menu span:last-child {
+    @apply delay-300;
+  }
+  .toggle__menu span:nth-child(2) {
+    @apply delay-0;
+  }
+  .toggle__menu span:nth-child(3) {
+    @apply delay-0;
+  }
+  .backdrop {
+    @apply hidden;
+  }
+  .backdrop.open {
+    @apply block left-0 fixed top-[72px] h-screen w-full backdrop-brightness-50 duration-700 overflow-y-hidden z-[41];
   }
 
   /* REWARDS STEPS */
@@ -141,7 +168,8 @@
     @apply w-[112px] lg:w-[190px] md:w-[190px];
   }
   .borderImg {
-    @apply border-[2rem]; border-image:url('../img/account_bg.png') 10 round;
+    @apply border-[2rem];
+    border-image: url("../img/account_bg.png") 10 round;
   }
 
   /* FOOTER */
